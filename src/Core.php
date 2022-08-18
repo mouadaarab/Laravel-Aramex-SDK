@@ -78,7 +78,7 @@ class Core
                     'AccountNumber' => $this->accNum,
                     'Contact'       => [
                         'PersonName'            => $shipper->PersonName,
-                        'CompanyName'           => config('aramex.company_name'),
+                        'CompanyName'           => $shipper->CompanyName,
                         'PhoneNumber1'          => $shipper->PhoneNumber1,
                         'CellPhone'             => $shipper->CellPhone,
                         'EmailAddress'          => $shipper->EmailAddress,
@@ -100,7 +100,7 @@ class Core
                     'AccountNumber' => $this->accNum, //Account Number 
                     'Contact'       => [
                         'PersonName'            => $consignee->PersonName,//Person Name 
-                        'CompanyName'           => $consignee->PersonName,
+                        'CompanyName'           => $consignee->CompanyName,
                         'PhoneNumber1'          => $consignee->PhoneNumber1, //Phone Number
                         'CellPhone'             => $consignee->CellPhone, //Cell Phone 
                         'EmailAddress'          => $consignee->EmailAddress, // Email
@@ -235,7 +235,7 @@ class Core
             'ClosingTime' => $pickupDetails->ClosingTime, //+28 hours
             'PickupContact' => [
                 'PersonName'    => $pickupAddress->PersonName, // should be static 'SomeName',
-                'CompanyName'   => config('aramex.CompanyName'), // config file
+                'CompanyName'   => $pickupAddress->CompanyName, // config file
                 'PhoneNumber1'  => $pickupAddress->PhoneNumber1, // should be static '0777777',
                 'CellPhone'     => $pickupAddress->CellPhone, // should be static '0555555',
                 'EmailAddress'  => $pickupAddress->EmailAddress // should be static 'email@somedomain.com'

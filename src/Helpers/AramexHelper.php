@@ -65,6 +65,7 @@ class AramexHelper
 
         // Start extracting
         $pickupAddress->PersonName = $param['name']; 
+        $pickupAddress->CompanyName = $param['company_name']; 
         $pickupAddress->EmailAddress = $param['email'];
 
         $pickupAddress->PhoneNumber1 = $param['phone'];
@@ -123,6 +124,7 @@ class AramexHelper
         $addresDetails = new \stdClass;
 
         $addresDetails->PersonName = $param['shipper']['name']; 
+        $addresDetails->CompanyName = $param['shipper']['company_name']; 
         $addresDetails->EmailAddress = $param['shipper']['email'];
 
         $addresDetails->PhoneNumber1 = $param['shipper']['phone'];
@@ -148,6 +150,7 @@ class AramexHelper
         $addresDetails = new \stdClass;
 
         $addresDetails->PersonName = $param['consignee']['name']; 
+        $addresDetails->CompanyName = $param['consignee']['company_name']; 
         $addresDetails->EmailAddress = $param['consignee']['email'];
 
         $addresDetails->PhoneNumber1 = $param['consignee']['phone'];
